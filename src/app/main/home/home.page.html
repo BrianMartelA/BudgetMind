@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <app-header></app-header>
+
+  <ion-toolbar>
+    <ion-title>home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<a [routerLink]="['/login']" >Inicio de sesión!</a> <br>
+<a [routerLink]="['/register']"  >No tienes cuenta? Registrate!</a>
+<app-footer></app-footer>
+</ion-content>
+
