@@ -3,6 +3,20 @@
 <ion-content [fullscreen]="true">
 <app-header title="Login"></app-header>
 
+<form [formGroup]="form">
+
+
+<app-form icon="mail-outline"
+autocomplete="email"
+[control]="form.controls.email"
+type="email"
+label="correo"></app-form>
+<app-form icon="lock-closed-outline"
+
+></app-form>
+</form>
+
+
   <a [routerLink]="['/home']"  >Volver a home</a>
   <app-footer></app-footer>
 </ion-content>
