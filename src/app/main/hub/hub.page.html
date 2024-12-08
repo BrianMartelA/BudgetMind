@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>hub</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">hub</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <form [formGroup]="budgetForm"(ngSubmit)="addBudget()">
+    <ion-item>
+      <ion-label position="floating">Mes</ion-label>
+      <ion-input formControlName="month" [(ngModel)]="userBudget.month"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Presupuesto del mes</ion-label>
+      <ion-input formControlName="name" [(ngModel)]="userBudget.name" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Monto</ion-label>
+      <ion-input formControlName="value" [(ngModel)]="userBudget.value"></ion-input>
+    </ion-item>
+
+    <ion-button type="submit">Subir</ion-button>
+  </form>
+
+
+  <p>{{user['nombre']}}</p>
+  <p>{{user['apellido']}}</p>
+
+</ion-content>

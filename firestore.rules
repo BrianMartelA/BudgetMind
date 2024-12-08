@@ -1,0 +1,19 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Permitir la lectura de la colección 'Classes' para todos los usuarios
+     match /budget/{userId} {
+
+      // Permitir leer y escribir solo si el usuario autenticado es el propietario
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+
+
+    }
+
+    // Colección de usuarios
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId; // Solo el usuario puede leer/escribir su propio documento
+    }
+  }
+}

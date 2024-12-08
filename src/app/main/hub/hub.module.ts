@@ -4,20 +4,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { RegisterPageRoutingModule } from './register-routing.module';
+import { HubPageRoutingModule } from './hub-routing.module';
 
-import { RegisterPage } from './register.page';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { HubPage } from './hub.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RegisterPageRoutingModule,
-    SharedModule,
+    HubPageRoutingModule,
     ReactiveFormsModule
   ],
-  declarations: [RegisterPage]
+  declarations: [HubPage]
 })
-export class RegisterPageModule {}
+export class HubPageModule {}
